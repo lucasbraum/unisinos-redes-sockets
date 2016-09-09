@@ -1,10 +1,21 @@
 .video-player {
-  display: block;
+  display: inline-block;
   height: 100%;
   max-height: 100%;
-  max-width: 100%;
+  max-width: 75%;
   object-fit: cover;
   position: absolute;
-  width: 100%;
+  width: 75%;
+  left: 0;
+  top: 0;
+}
+
+.chat-container {
+  display: inline-block;
+  margin-left: 75%;
+  position: absolute;
+  width: 25%;
+  top: 0;
+  height: 100%;
   left: 0;
 }
