@@ -1,0 +1,11 @@
+{
+  "name": "sockets-chat",
+  "description": "Trabalho de sockets",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-ui-router": "~0.2.15"
+  }
+}

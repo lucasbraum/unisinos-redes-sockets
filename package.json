@@ -6,6 +6,7 @@
   "author": "Lucas Braum e Gabriel Nunes",
   "private": true,
   "scripts": {
+    "postinstall": "bower install",
     "start": "node server.js"
   },
   "dependencies": {
