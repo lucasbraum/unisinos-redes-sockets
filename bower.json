@@ -6,6 +6,10 @@
   "private": true,
   "dependencies": {
     "angular": "~1.4.0",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
+    "angular-material": "^1.1.1"
+  },
+  "resolutions": {
+    "angular": "1.5.8"
   }
 }

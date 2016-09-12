@@ -3,7 +3,7 @@
   "use strict";
 
   angular.module("sockets-chat", [
-    'ui.router'
+    'ui.router', 'ngMaterial'
   ])
   .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider){
