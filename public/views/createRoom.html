@@ -4,10 +4,10 @@
     <div class="create-room-form">
       <md-input-container>
         <label>Nome da sala</label>
-        <input ng-model="user.title">
+        <input ng-model="roomName">
       </md-input-container>
     </div>
     
-    <md-button class="md-raised md-primary">Criar</md-button>
+    <md-button ui-sref="adminRoom({ name : roomName })" class="md-raised md-primary">Criar</md-button>
   </div>
 </div>

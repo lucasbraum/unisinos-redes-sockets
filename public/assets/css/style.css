@@ -18,6 +18,7 @@
   top: 0;
   height: 100%;
   left: 0;
+  background-color: #efeef1;
 }
 
 .center-container {
@@ -46,4 +47,12 @@
 
 .create-room-form {
   margin-top: 60px;
+}
+
+.message-input-container {
+  display: block;
+  bottom: 0;
+  right: 15px;
+  position: absolute;
+  left: 15px;
 }

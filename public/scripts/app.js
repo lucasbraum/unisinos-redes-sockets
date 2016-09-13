@@ -17,6 +17,15 @@
               controller : 'CreateRoomController'
             }
           }
+        })
+        .state('adminRoom', {
+          url: "/:name/admin",
+          views: {
+            '' : {
+              templateUrl : '/views/adminRoom.html',
+              controller : 'AdminRoomController'
+            }
+          }
         });
 
       $urlRouterProvider.otherwise('/');
