@@ -1,13 +1,25 @@
+
 <div class="absolute-center room-container-card">
-  <div class="center-container">
-    <h2 class="room-container-card-h2">Crie uma sala e compartilhe com seus amigos!</h2>
-    <div class="create-room-form">
-<!--      <md-input-container>-->
-        <label>Nome da sala</label>
-        <input ng-model="roomName">
-<!--      </md-input-container>-->
+
+  <div class="ui middle aligned center aligned grid">
+    <div class="column">
+      <h2 class="ui teal header sockets-home">
+        <div class="content">
+          Crie uma sala e compartilhe com seus amigos!
+        </div>
+      </h2>
+      <form class="ui large form">
+        <div class="ui stacked segment">
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="talk icon"></i>
+              <input type="text" ng-model="roomName" placeholder="Nome da sala">
+            </div>
+          </div>
+          <div ui-sref="adminRoom({ name : roomName })" class="ui fluid large teal submit button">Criar</div>
+        </div>
+      </form>
     </div>
-    
-<!--    <md-button ui-sref="adminRoom({ name : roomName })" class="md-raised md-primary">Criar</md-button>-->
   </div>
+
 </div>
