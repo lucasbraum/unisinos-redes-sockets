@@ -6,7 +6,7 @@
     function( $scope ) {
       
       angular.element(document).ready(function () {
-        $scope.fnGetWebcamVideoAndAudio();
+//        $scope.fnGetWebcamVideoAndAudio();
       });
   
       $scope.fnGetWebcamVideoAndAudio = function(){
@@ -28,6 +28,57 @@
       }
       
       var socket = io();
+
+      $scope.messages = [
+        {
+          message: 'Brunch this weekend?',
+          name: 'Min Li Chan'
+        },
+        {
+          name: 'Min Li Chan',
+          message: " I'll be in your neighborhood doing errands"
+        },
+        {
+          message: 'Brunch this weekend?',
+          name: 'Min Li Chan'
+        },
+        {
+          name: 'Min Li Chan',
+          message: " I'll be in your neighborhood doing errands"
+        },
+        {
+          message: 'Brunch this weekend?',
+          name: 'Min Li Chan'
+        },
+        {
+          name: 'Min Li Chan',
+          message: " I'll be in your neighborhood doing errands"
+        },
+        {
+          message: 'Brunch this weekend?',
+          name: 'Min Li Chan'
+        },
+        {
+          name: 'Min Li Chan',
+          message: " I'll be in your neighborhood doing errands"
+        },
+        {
+          message: 'Brunch this weekend?',
+          name: 'Min Li Chan'
+        },
+        {
+          name: 'Min Li Chan',
+          message: " I'll be in your neighborhood doing errands"
+        },
+        {
+          message: 'Brunch this weekend?',
+          name: 'Min Li Chan'
+        },
+        {
+          name: 'Min Li Chan',
+          message: " I'll be in your neighborhood doing errands"
+        }
+      ];
   
     }
   ]);

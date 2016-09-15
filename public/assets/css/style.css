@@ -56,3 +56,7 @@
   position: absolute;
   left: 15px;
 }
+
+.message-title {
+  font-weight: bold !important;
+}
