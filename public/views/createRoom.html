@@ -22,7 +22,7 @@
               <input type="text" ng-model="roomName" placeholder="Nome da sala">
             </div>
           </div>
-          <div ui-sref="adminRoom({ name : roomName })" class="ui fluid large teal submit button">Criar</div>
+          <div ng-click="createRoom();" class="ui fluid large teal submit button">Criar</div>
         </div>
       </form>
     </div>

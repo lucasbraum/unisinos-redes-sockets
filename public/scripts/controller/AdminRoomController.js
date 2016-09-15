@@ -6,7 +6,7 @@
     function( $scope ) {
       
       angular.element(document).ready(function () {
-//        $scope.fnGetWebcamVideoAndAudio();
+        $scope.fnGetWebcamVideoAndAudio();
       });
   
       $scope.fnGetWebcamVideoAndAudio = function(){
@@ -26,9 +26,6 @@
           }, fnErrorCallback);
         }
       }
-      
-      var socket = io();
-      
       
 
       $scope.messages = [

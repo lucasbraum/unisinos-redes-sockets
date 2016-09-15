@@ -11,16 +11,21 @@ server.listen(8000, function () {
 // Routing
 app.use(express.static(__dirname + '/public'));
 
-var aRooms = [];
 
 io.on('connection', function(socket){
-//  io.emit('user-connected', msg);
+  
+  
   
   socket.on('disconnect', function(){
     console.log('user disconnected');
   });
   
-  socket.on('chat-message', function(msg){
-//    io.emit('chat-message', msg);
+  socket.on('create-room', function(oRoom){
+    aRooms.push(oRoom);
   });
+  
+  socket.on('join-room', function(sRoomName){
+    socket.join(sRoomName);
+  });
+  
 });
