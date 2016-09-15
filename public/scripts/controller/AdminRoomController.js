@@ -28,86 +28,13 @@
       }
       
       var socket = io();
+      
+      
 
       $scope.messages = [
         {
           content: 'Brunch this weekend?',
           name: 'Min Li Chan',
-          time: '10 minutes ago'
-        },
-        {
-          name: 'Min Li Chan',
-          content: " I'll be in your neighborhood doing errands",
-          time: '10 minutes ago'
-        },
-        {
-          content: 'Brunch this weekend?',
-          name: 'Min Li Chan',
-          time: '10 minutes ago'
-        },
-        {
-          name: 'Min Li Chan',
-          content: " I'll be in your neighborhood doing errands",
-          time: '10 minutes ago'
-        },
-        {
-          content: 'Brunch this weekend?',
-          name: 'Min Li Chan',
-          time: '10 minutes ago'
-        },
-        {
-          name: 'Min Li Chan',
-          content: " I'll be in your neighborhood doing errands",
-          time: '10 minutes ago'
-        },
-        {
-          content: 'Brunch this weekend?',
-          name: 'Min Li Chan',
-          time: '10 minutes ago'
-        },
-        {
-          name: 'Min Li Chan',
-          content: " I'll be in your neighborhood doing errands",
-          time: '10 minutes ago'
-        },
-        {
-          content: 'Brunch this weekend?',
-          name: 'Min Li Chan',
-          time: '10 minutes ago'
-        },
-        {
-          name: 'Min Li Chan',
-          content: " I'll be in your neighborhood doing errands",
-          time: '10 minutes ago'
-        },
-        {
-          content: 'Brunch this weekend?',
-          name: 'Min Li Chan',
-          time: '10 minutes ago'
-        },
-        {
-          name: 'Min Li Chan',
-          content: " I'll be in your neighborhood doing errands",
-          time: '10 minutes ago'
-        },
-        {
-          content: 'Brunch this weekend?',
-          name: 'Min Li Chan',
-          time: '10 minutes ago'
-        },
-        {
-          name: 'Min Li Chan',
-          content: " I'll be in your neighborhood doing errands",
-          time: '10 minutes ago'
-        },
-        {
-          content: 'Brunch this weekend?',
-          name: 'Min Li Chan',
-          time: '10 minutes ago'
-        },
-        {
-          name: 'Min Li Chan',
-          content: " I'll be in your neighborhood doing errands",
           time: '10 minutes ago'
         }
       ];

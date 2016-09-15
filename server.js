@@ -11,6 +11,8 @@ server.listen(8000, function () {
 // Routing
 app.use(express.static(__dirname + '/public'));
 
+var aRooms = [];
+
 io.on('connection', function(socket){
 //  io.emit('user-connected', msg);
   
