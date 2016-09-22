@@ -3,7 +3,7 @@
   "use strict";
 
   angular.module("sockets-chat", [
-    'ui.router'
+    'ui.router', 'ngAvatar'
   ])
   .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider){

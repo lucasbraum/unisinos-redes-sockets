@@ -7,9 +7,10 @@
   "dependencies": {
     "angular": "~1.4.0",
     "angular-ui-router": "~0.2.15",
-    "semantic": "semantic-ui#~2.1.8"
+    "semantic": "semantic-ui#~2.1.8",
+    "angular-avatar": "^1.2.0"
   },
   "resolutions": {
-    "angular": "1.5.8"
+    "angular": "^1.4.8"
   }
 }
