@@ -8,10 +8,20 @@
         var socket = io();
 		var SocketService = {};
       
-        SocketService.createRoom = function(sRoomName, sAdminName, fnCallback){
-          socket.emit('create-room', { room : sRoomName, admin : sAdminName });
-          fnCallback();
+      
+        SocketService.joinRoom = function(sRoomName){
+          socket.emit('join-room', sRoomName);
         };
+      
+        SocketService.sendMessage = function(oMsg){
+          socket.emit('send-message', oMsg);
+        };
+      
+        SocketService.registerCallbackToNewMessages = function(fnCallback){
+          socket.on('new-message', fnCallback);
+        };
+      
+        
 
 		return SocketService;
 	}

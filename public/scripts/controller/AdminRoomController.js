@@ -2,8 +2,8 @@
 
   "use strict";
 
-  angular.module('sockets-chat').controller('AdminRoomController', ['$scope',
-    function( $scope ) {
+  angular.module('sockets-chat').controller('AdminRoomController', ['$scope', '$stateParams', 'SocketService',
+    function( $scope, $stateParams, SocketService ) {
       
       angular.element(document).ready(function () {
         $scope.fnGetWebcamVideoAndAudio();

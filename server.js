@@ -14,18 +14,16 @@ app.use(express.static(__dirname + '/public'));
 
 io.on('connection', function(socket){
   
-  
-  
   socket.on('disconnect', function(){
     console.log('user disconnected');
   });
   
-  socket.on('create-room', function(oRoom){
-    aRooms.push(oRoom);
-  });
-  
   socket.on('join-room', function(sRoomName){
     socket.join(sRoomName);
+  });
+  
+  socket.on('send-message', function(oMessage){
+    io.to(oMessage.room).emit('new-message', oMessage);
   });
   
 });
