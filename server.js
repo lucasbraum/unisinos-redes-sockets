@@ -4,8 +4,12 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 
-server.listen(8000, function () {
-  console.log('Server listening at port: 8000');
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 8000;
+
+server.listen(port, function () {
+  console.log('Server listening at port: ' + port);
 });
 
 // Routing
