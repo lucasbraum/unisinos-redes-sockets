@@ -12,7 +12,7 @@
         if (!$scope.roomName && !$scope.adminName) {
           return;
         }
-        SocketService.createRoom($scope.roomName, $scope.adminName, function(){
+        SocketService.joinRoom($scope.roomName, function(){
           $state.go("adminRoom", { name : $scope.roomName });
         })
       };

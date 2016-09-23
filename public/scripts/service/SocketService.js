@@ -9,8 +9,12 @@
 		var SocketService = {};
       
       
-        SocketService.joinRoom = function(sRoomName){
+        SocketService.joinRoom = function(sRoomName, fnCallback){
           socket.emit('join-room', sRoomName);
+          
+          if (fnCallback){
+            fnCallback();
+          }
         };
       
         SocketService.sendMessage = function(oMsg){
