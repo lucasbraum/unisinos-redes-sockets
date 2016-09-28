@@ -18,22 +18,17 @@
             }
           }
         })
-        .state('adminRoom', {
-          url: "/:name/admin",
-          views: {
-            '' : {
-              templateUrl : '/views/adminRoom.html',
-              controller : 'AdminRoomController'
-            }
-          }
-        })
-        .state('viewerRoom', {
+        .state('room', {
           url: "/:name",
           views: {
             '' : {
               templateUrl : '/views/viewerRoom.html',
               controller : 'ViewerRoomController'
             }
+          },
+          params: {
+            isAdmin : false,
+            user : ""
           }
         });
 

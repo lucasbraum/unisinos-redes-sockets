@@ -2,23 +2,14 @@
 
   "use strict";
 
-  angular.module('sockets-chat').controller('ViewerRoomController', ['$scope', '$timeout', '$stateParams', 'SocketService',
-    function( $scope, $timeout, $stateParams, SocketService ) {
-      
-      function getRandomColor() {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++ ) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-      }
+  angular.module('sockets-chat').controller('ViewerRoomController', ['$scope', '$timeout', '$stateParams', 'SocketService', 'UtilsService',
+    function( $scope, $timeout, $stateParams, SocketService, UtilsService ) {
       
       $scope.message = "";
-      $scope.username = "";
+      $scope.username = $stateParams.user;
       $scope.messages = [];
       
-      $scope.userColor = getRandomColor();
+      $scope.userColor = UtilsService.getRandomColor();
       
       SocketService.registerCallbackToNewMessages(function(oMsg){
         $scope.messages.push(oMsg);

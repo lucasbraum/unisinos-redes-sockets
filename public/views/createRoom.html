@@ -8,7 +8,7 @@
           Crie uma sala e compartilhe com seus amigos!
         </div>
       </h2>
-      <form class="ui large form">
+      <form class="ui large form" ng-submit="joinRoom();">
         <div class="ui stacked segment">
           <div class="field">
             <div class="ui left icon input">
@@ -22,7 +22,7 @@
               <input type="text" ng-model="roomName" placeholder="Nome da sala">
             </div>
           </div>
-          <div ng-click="createRoom();" class="ui fluid large teal submit button">Criar</div>
+          <button type="submit" class="ui fluid large teal submit button">Criar</button>
         </div>
       </form>
     </div>

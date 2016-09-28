@@ -2,19 +2,17 @@
 
   "use strict";
 
-  angular.module('sockets-chat').controller('CreateRoomController', ['$scope', '$state', 'SocketService',
-    function( $scope, $state, SocketService ) {
-  
-      $scope.roomName = "";
-      $scope.adminName = "";
+  angular.module('sockets-chat').controller('CreateRoomController', ['$scope', '$state', '$stateParams', 'SocketService',
+    function( $scope, $state, $stateParams, SocketService ) {
       
-      $scope.createRoom = function(){
-        if (!$scope.roomName && !$scope.adminName) {
+      $scope.joinRoom = function(){
+        if (!$scope.adminName || !$scope.roomName){
           return;
         }
+        
         SocketService.joinRoom($scope.roomName, function(){
-          $state.go("adminRoom", { name : $scope.roomName });
-        })
+          $state.go("room", { isAdmin : true, user : $scope.adminName, name : $scope.roomName });
+        });
       };
   
     }
