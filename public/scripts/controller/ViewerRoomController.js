@@ -16,14 +16,14 @@
         $scope.$apply();
       });
       
-      $scope.sendMessage = function(){
-        if (!$scope.message){
+      $scope.sendMessage = function(sContent){
+        if (!$scope.message && !sContent){
           return;
         }
         
         var oMsg = {
           room : $stateParams.name,
-          content : $scope.message,
+          content : sContent || $scope.message,
           name : $scope.username,
           userColor : $scope.userColor,
           time : new Date()
@@ -38,8 +38,9 @@
           return;
         }
         
-        SocketService.joinRoom($stateParams.name);
         $scope.username = username;
+        SocketService.joinRoom($stateParams.name);
+        $scope.sendMessage("Joined the room.")
       };
   
     }
