@@ -18,12 +18,12 @@
           navigator.getUserMedia({ video: true, audio: true }, function (stream) {
             $("#videoPlayer").attr("src", URL.createObjectURL(stream));
 
-            var recorder = new MediaRecorder(stream, { mimeType: "video/webm" });
+            var recorder = new MediaStreamRecorder(stream);
 
-            recorder.ondataavailable = function (event) {
+            recorder.ondataavailable = function (blob) {
               SocketService.broadcast({
                 room: $stateParams.name,
-                data: event.data
+                data: blob
               });
             }
 
@@ -33,15 +33,10 @@
           });
         }
       } else {
-         var mediaSource = new MediaSource();
-
         SocketService.registerCallbackToVideoInput(function (oData) {
           var videoPlayer = document.getElementById("videoPlayer");
 
-          var sourceBuffer = mediaSource.addSourceBuffer("video/webm");
-          sourceBuffer.appendStream(oData);
-
-          videoPlayer.src = URL.createObjectURL(mediaSource);
+          videoPlayer.src = URL.createObjectURL(new Blob([new Uint8Array(oData).buffer], { type: "video/webm" }));
         });
       }
 
