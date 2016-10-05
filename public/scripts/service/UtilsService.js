@@ -1,20 +1,20 @@
-+function(){
++function () {
 
   "use strict";
 
   angular.module('sockets-chat').factory('UtilsService', ['$timeout',
-	function( $timeout ){
+    function ($timeout) {
 
-        this.getRandomColor = function() {
-          var letters = '0123456789ABCDEF';
-          var color = '#';
-          for (var i = 0; i < 6; i++ ) {
-            color += letters[Math.floor(Math.random() * 16)];
-          }
-          return color;
-        };
-      
-		return this;
-	}
-]);
-}();
+      this.getRandomColor = function () {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      };
+
+      return this;
+    }
+  ]);
+} ();
