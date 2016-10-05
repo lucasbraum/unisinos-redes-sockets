@@ -25,7 +25,13 @@
         socket.on('new-message', fnCallback);
       };
 
+      SocketService.broadcast = function(oMessage) {
+        socket.emit('video-broadcast', oMessage);
+      };
 
+      SocketService.registerCallbackToVideoInput = function (fnCallback) {
+        socket.on('video-input', fnCallback);
+      };
 
       return SocketService;
     }

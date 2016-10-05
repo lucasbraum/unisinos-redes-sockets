@@ -30,4 +30,8 @@ io.on('connection', function (socket) {
     io.to(oMessage.room).emit('new-message', oMessage);
   });
 
+  socket.on('video-broadcast', function (oMessage) {
+    io.to(oMessage.room).broadcast('video-input', oMessage.data);
+  });
+
 });
