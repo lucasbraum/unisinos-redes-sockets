@@ -31,7 +31,7 @@ io.on('connection', function (socket) {
   });
 
   socket.on('video-broadcast', function (oMessage) {
-    io.to(oMessage.room).broadcast('video-input', oMessage.data);
+    io.to(oMessage.room).emit('video-input', oMessage.data);
   });
 
 });
