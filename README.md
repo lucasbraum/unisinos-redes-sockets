@@ -1,8 +1,4 @@
+Academic work to learn about web sockets.
 
-# Redes - Unisinos
+We've used NodeJS + Socket.io + AngularJS
 
-Trabalhando utilizando sockets
-
-## Alunos
-
-Lucas Braum e Gabriel Nunes
